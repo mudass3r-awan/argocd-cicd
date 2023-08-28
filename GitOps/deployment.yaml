@@ -12,6 +12,8 @@ spec:
       labels:
         app: website
     spec:
+      imagePullSecrets:
+      - name: dockerhub-secret
       containers:
         - name: website-container
           image: my-website:latest
