@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+ 
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from your Git repository
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/mudass3r-awan/website.git']]])
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // Run your build commands here
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Deploy your built application
+                // This could involve copying files to a web server, etc.
+            }
+        }
+    }
+}
