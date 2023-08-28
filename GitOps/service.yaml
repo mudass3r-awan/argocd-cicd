@@ -7,6 +7,6 @@ spec:
     app: website
   ports:
     - protocol: TCP
-      port: 81
+      port: 83
       targetPort: 80
   type: LoadBalancer
