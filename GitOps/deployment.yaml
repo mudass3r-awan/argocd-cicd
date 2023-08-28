@@ -16,6 +16,6 @@ spec:
       - name: dockerhub-secret
       containers:
         - name: website-container
-          image: my-website:latest
+          image: mudass3r/learning:my-website
           ports:
             - containerPort: 80
