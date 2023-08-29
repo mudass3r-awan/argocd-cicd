@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: website-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: website
@@ -16,6 +16,6 @@ spec:
       - name: dockerhub-secret
       containers:
         - name: website-container
-          image: mudass3r/learning:my-website
+          image: mudass3r/learning1:v1
           ports:
             - containerPort: 80
